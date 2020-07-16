@@ -27,7 +27,13 @@ class App extends React.Component {
               />
       }
       else{
-        return <ArticleItem title={article.title} mode={this.state.mode} />
+        return <ArticleItem 
+              key={article.id} 
+              title={article.title}
+              url={article.url}
+              urlToImage={article.urlToImage}
+              description={article.description}
+              mode={this.state.mode} />
       }
             })
   }
